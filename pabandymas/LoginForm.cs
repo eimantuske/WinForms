@@ -17,10 +17,10 @@ namespace pabandymas
 
             this.PassField.AutoSize = false;
             this.PassField.Size = new Size(this.PassField.Size.Width, 32);
-
             this.PassField.UseSystemPasswordChar = true;
+           
 
-            
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -50,7 +50,9 @@ namespace pabandymas
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            HomePage pagrindinis = new HomePage();
+            pagrindinis.Show();
+            this.Hide();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -60,7 +62,11 @@ namespace pabandymas
 
         private void button3_Click(object sender, EventArgs e)
         {
+            SignUpform registracijosLangas = new SignUpform();
 
+            registracijosLangas.Show();
+
+            this.Hide();
         }
 
         private void label2_Click_1(object sender, EventArgs e)

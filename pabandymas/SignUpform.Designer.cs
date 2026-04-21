@@ -1,6 +1,6 @@
 ﻿namespace pabandymas
 {
-    partial class LoginForm
+    partial class SignUpform
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUpform));
             panel1 = new Panel();
+            label2 = new Label();
+            RepPassBox = new TextBox();
+            pictureBox3 = new PictureBox();
             PasswordLable = new Label();
             UsernameLable = new Label();
             PassField = new TextBox();
             label3 = new Label();
-            SignUpbutton = new Button();
+            Loginbutton1 = new Button();
             LoginButton = new Button();
             pictureBox2 = new PictureBox();
             LoginField = new TextBox();
@@ -42,6 +45,7 @@
             panel2 = new Panel();
             label1 = new Label();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -50,11 +54,14 @@
             // panel1
             // 
             panel1.BackColor = Color.Azure;
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(RepPassBox);
+            panel1.Controls.Add(pictureBox3);
             panel1.Controls.Add(PasswordLable);
             panel1.Controls.Add(UsernameLable);
             panel1.Controls.Add(PassField);
             panel1.Controls.Add(label3);
-            panel1.Controls.Add(SignUpbutton);
+            panel1.Controls.Add(Loginbutton1);
             panel1.Controls.Add(LoginButton);
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(LoginField);
@@ -63,9 +70,38 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(399, 451);
-            panel1.TabIndex = 0;
+            panel1.Size = new Size(399, 580);
+            panel1.TabIndex = 1;
             panel1.Paint += panel1_Paint;
+            // 
+            // label2
+            // 
+            label2.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(98, 320);
+            label2.Name = "label2";
+            label2.Size = new Size(244, 29);
+            label2.TabIndex = 13;
+            label2.Text = "Repeat Password";
+            label2.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // RepPassBox
+            // 
+            RepPassBox.BackColor = SystemColors.Window;
+            RepPassBox.Font = new Font("Microsoft Sans Serif", 12F);
+            RepPassBox.Location = new Point(98, 353);
+            RepPassBox.Name = "RepPassBox";
+            RepPassBox.Size = new Size(244, 26);
+            RepPassBox.TabIndex = 12;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(28, 320);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(64, 64);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 11;
+            pictureBox3.TabStop = false;
             // 
             // PasswordLable
             // 
@@ -76,7 +112,6 @@
             PasswordLable.TabIndex = 10;
             PasswordLable.Text = "Password";
             PasswordLable.TextAlign = ContentAlignment.MiddleLeft;
-            PasswordLable.Click += label2_Click_2;
             // 
             // UsernameLable
             // 
@@ -87,7 +122,6 @@
             UsernameLable.TabIndex = 9;
             UsernameLable.Text = "Username";
             UsernameLable.TextAlign = ContentAlignment.MiddleLeft;
-            UsernameLable.Click += label2_Click_1;
             // 
             // PassField
             // 
@@ -101,27 +135,27 @@
             // label3
             // 
             label3.ImageAlign = ContentAlignment.TopCenter;
-            label3.Location = new Point(123, 395);
+            label3.Location = new Point(124, 523);
             label3.Name = "label3";
             label3.Size = new Size(138, 13);
             label3.TabIndex = 7;
-            label3.Text = "Don't have account ?";
+            label3.Text = "Have account ?";
             label3.TextAlign = ContentAlignment.MiddleCenter;
             label3.Click += label3_Click;
             // 
-            // SignUpbutton
+            // Loginbutton1
             // 
-            SignUpbutton.BackColor = Color.AliceBlue;
-            SignUpbutton.Cursor = Cursors.Hand;
-            SignUpbutton.FlatStyle = FlatStyle.Flat;
-            SignUpbutton.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            SignUpbutton.Location = new Point(123, 411);
-            SignUpbutton.Name = "SignUpbutton";
-            SignUpbutton.Size = new Size(138, 28);
-            SignUpbutton.TabIndex = 6;
-            SignUpbutton.Text = "Sign Up";
-            SignUpbutton.UseVisualStyleBackColor = false;
-            SignUpbutton.Click += button3_Click;
+            Loginbutton1.BackColor = Color.AliceBlue;
+            Loginbutton1.Cursor = Cursors.Hand;
+            Loginbutton1.FlatStyle = FlatStyle.Flat;
+            Loginbutton1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Loginbutton1.Location = new Point(124, 539);
+            Loginbutton1.Name = "Loginbutton1";
+            Loginbutton1.Size = new Size(138, 28);
+            Loginbutton1.TabIndex = 6;
+            Loginbutton1.Text = "Sign In";
+            Loginbutton1.UseVisualStyleBackColor = false;
+            Loginbutton1.Click += Loginbutton1_Click;
             // 
             // LoginButton
             // 
@@ -129,13 +163,13 @@
             LoginButton.Cursor = Cursors.Hand;
             LoginButton.FlatStyle = FlatStyle.Flat;
             LoginButton.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LoginButton.Location = new Point(98, 349);
+            LoginButton.Location = new Point(100, 476);
             LoginButton.Name = "LoginButton";
             LoginButton.Size = new Size(199, 43);
             LoginButton.TabIndex = 5;
-            LoginButton.Text = "Log In";
+            LoginButton.Text = "Sign Up";
             LoginButton.UseVisualStyleBackColor = false;
-            LoginButton.Click += button2_Click;
+            LoginButton.Click += LoginButton_Click;
             // 
             // pictureBox2
             // 
@@ -146,7 +180,6 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 3;
             pictureBox2.TabStop = false;
-            pictureBox2.Click += pictureBox2_Click;
             // 
             // LoginField
             // 
@@ -156,7 +189,6 @@
             LoginField.Name = "LoginField";
             LoginField.Size = new Size(244, 34);
             LoginField.TabIndex = 2;
-            LoginField.TextChanged += textBox1_TextChanged;
             // 
             // pictureBox1
             // 
@@ -191,21 +223,19 @@
             label1.TextAlign = ContentAlignment.MiddleCenter;
             label1.Click += label1_Click;
             // 
-            // LoginForm
+            // SignUpform
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(399, 451);
+            ClientSize = new Size(399, 580);
             Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
-            MaximizeBox = false;
-            MinimizeBox = false;
-            Name = "LoginForm";
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "SignUpform";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "LoginForm";
-            Load += LoginForm_Load;
+            Load += SignUpform_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
@@ -215,16 +245,19 @@
         #endregion
 
         private Panel panel1;
+        private Label PasswordLable;
+        private Label UsernameLable;
+        private TextBox PassField;
+        private Label label3;
+        private Button Loginbutton1;
+        private Button LoginButton;
+        private PictureBox pictureBox2;
+        private TextBox LoginField;
+        private PictureBox pictureBox1;
         private Panel panel2;
         private Label label1;
-        private PictureBox pictureBox1;
-        private TextBox LoginField;
-        private PictureBox pictureBox2;
-        private Button LoginButton;
-        private Label label3;
-        private Button SignUpbutton;
-        private TextBox PassField;
-        private Label UsernameLable;
-        private Label PasswordLable;
+        private Label label2;
+        private TextBox RepPassBox;
+        private PictureBox pictureBox3;
     }
 }
