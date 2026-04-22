@@ -45,7 +45,7 @@ namespace pabandymas
         private void button3_Click(object sender, EventArgs e)
         {
             Nd namudarbas = new Nd();
-            namudarbas.Show();w
+            namudarbas.Show();
             
         }
     }
